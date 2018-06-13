@@ -2,11 +2,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 const MovieDetail = ({ movie }) => {
-    const { container, text } = styles;
-    const { title, year } = movie;
+    const { container, titleStyle, subTitleStyle } = styles;
+    const { title, year, director } = movie;
     return (
         <View style={container}>
-            <Text style={text}>{title} - {year}</Text>
+            <Text style={titleStyle}>{title} - {year}</Text>
+            <Text style={subTitleStyle}>{director}</Text>
         </View>
     );
 };
@@ -14,13 +15,16 @@ const MovieDetail = ({ movie }) => {
 const styles = {
     container: {
         height: 60,
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         paddingLeft: 10,
         borderColor: '#ddd',
         borderBottomWidth: 1,
     },
-    text: {
+    titleStyle: {
         fontSize: 18,
+    },
+    subTitleStyle: {
+        fontSize: 12,
     }
 };
 

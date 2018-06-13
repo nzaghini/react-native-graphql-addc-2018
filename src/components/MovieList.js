@@ -7,8 +7,8 @@ class MovieList extends Component {
     constructor() {
         super();
         // Fist iteration: Static Version of the App
-        this.state = { movies: [{ id: 1, title: 'Interstellar', year: '2014' }, 
-                       { id: 2, title: 'Mad Max: Fury Road', year: '2015' }] };
+        this.state = { movies: [{ id: 1, title: 'Interstellar', year: '2014', director: 'Christopher Nolan' }, 
+                       { id: 2, title: 'Mad Max: Fury Road', year: '2015', director: 'George Miller' }] };
     }
 
     renderMovies() {
