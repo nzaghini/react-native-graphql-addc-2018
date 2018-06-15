@@ -7,7 +7,7 @@ const MovieDetail = ({ movie }) => {
     return (
         <View style={container}>
             <Text style={titleStyle}>{title} - {year}</Text>
-            <Text style={subTitleStyle}>{director}</Text>
+            <Text style={subTitleStyle}>{director.firstName} {director.lastName}</Text>
         </View>
     );
 };

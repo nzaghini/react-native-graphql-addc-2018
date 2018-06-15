@@ -1,31 +1,56 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Text, ActivityIndicator } from 'react-native';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 import { MovieDetail } from './';
 
 class MovieList extends Component {
 
-    constructor() {
-        super();
-        // Fist iteration: Static Version of the App
-        this.state = { movies: [{ id: 1, title: 'Interstellar', year: '2014', director: 'Christopher Nolan' }, 
-                       { id: 2, title: 'Mad Max: Fury Road', year: '2015', director: 'George Miller' }] };
-    }
-
-    renderMovies() {
-        // Bad performance for large list. Just example of props vs state
-        return this.state.movies.map(movie => {
+    renderMovies({ allMovies }) {
+        // Bad performance for large list. Example only.
+        return allMovies.map(movie => {
             return <MovieDetail key={movie.id} movie={movie} />;
         });
     }
 
     render() {
         return (
-            <ScrollView>
-                {this.renderMovies()}
-            </ScrollView>
+            <Query query={query}>
+                {({ loading, error, data }) => {
+                    if (loading) return <ActivityIndicator style={styles.loadingIndicator} />;
+                    if (error) return <Text>{`Error: ${error}`}</Text>;
+                    console.log(data);
+                    return (
+                        <ScrollView>
+                            {this.renderMovies(data)}
+                        </ScrollView>
+                    );
+            }}
+        </Query>
         );
     }
 
 }
+
+// es6 template string to crete the query
+const query = gql` 
+    {
+        allMovies{
+            id
+            title
+            year
+            director{
+                firstName
+                lastName
+            }
+        }
+    }
+`;
+
+const styles = {
+    loadingIndicator: {
+        flex: 1,
+    },
+};
 
 export { MovieList };
