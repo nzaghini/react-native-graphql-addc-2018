@@ -53,4 +53,4 @@ const styles = {
     },
 };
 
-export { MovieList };
+export default MovieList;

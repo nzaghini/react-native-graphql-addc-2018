@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly first movie 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomWidth": 1,
+      "borderColor": "#ddd",
+      "height": 60,
+      "justifyContent": "center",
+      "paddingLeft": 10,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    Interstellar
+     - 
+    2014
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 12,
+      }
+    }
+  >
+    Christopher
+     
+    Nolan
+  </Text>
+</View>
+`;
+
+exports[`renders correctly second movie 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomWidth": 1,
+      "borderColor": "#ddd",
+      "height": 60,
+      "justifyContent": "center",
+      "paddingLeft": 10,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    Mad Max: Fury Road
+     - 
+    2015
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 12,
+      }
+    }
+  >
+    George
+     
+    Miller
+  </Text>
+</View>
+`;

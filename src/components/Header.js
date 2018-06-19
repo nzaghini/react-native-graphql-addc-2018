@@ -16,7 +16,6 @@ const styles = {
       justifyContent: 'center', // vertical
       alignItems: 'center', // horizontal
       height: 60,
-      paddingTop: 15,
       shadowColor: 'black',
       shadowOffset: { width: 0, height: 1 },
       shadowOpacity: 0.2,
@@ -26,4 +25,4 @@ const styles = {
     }
   };
 
-export { Header };
+export default Header;

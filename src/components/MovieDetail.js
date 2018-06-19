@@ -28,4 +28,4 @@ const styles = {
     }
 };
 
-export { MovieDetail };
+export default MovieDetail;
