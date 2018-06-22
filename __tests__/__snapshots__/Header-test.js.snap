@@ -8,7 +8,6 @@ exports[`renders correctly 1`] = `
       "backgroundColor": "#F8F8F8",
       "height": 60,
       "justifyContent": "center",
-      "paddingTop": 15,
       "shadowColor": "black",
       "shadowOffset": Object {
         "height": 1,
