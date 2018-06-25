@@ -9,12 +9,14 @@ By the end of the workshop you will be capable of understanding the technologies
 
 
 ## Environment Setup
-Setup your machine by following the instructions available at official React Native getting started link [link].
+Setup your machine by following the instructions available at official React Native getting started [link](https://facebook.github.io/react-native/docs/getting-started.html).
 Select your Operating System and desired target platform(s), then follow the setup instructions.
 
 Make sure you created an application with the command `react-native init MyMovies` and run it via `react-native run-ios` and/or `react-native run-android` successfully as per the getting started guide. In case of issues consult the troubleshoot section of the guide or refer to StackOverflow with the encountered issue.
 
-Please note that Java 8 is the actual supported version for Android. If you already upgraded to Java 9 you can either downgrade or keep them both but carefully setup the env to only use Java 8 for Android builds.
+Please note that __Java 8__ is the actual supported Java version for Android. If you have already upgraded to Java 9 you can either downgrade or keep both, but carefully setup the env to only use Java 8 for Android builds.
+
+Finally the GraphQL server companion project can be found at this [link](https://github.com/nzaghini/graphql-server-addc-2018).
 
 __Note__: you may get confused between `react-native init <NameOfYourProject>` and `create-react-native init  <NameOfYourProject>`. The first is the usual way you create a react native project with native dependencies and that's the approach used during the Workshop. The latter is a simplified setup which allows running iOS and Android react native without the need of Xcode or Android Studio to actually compile your app. Both are valid approaches and please note from the latter you can `eject` to the former.   
 Still, the Workshop will just cover the `react-native init <NameOfYourProject>` setup.
