@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const MovieDetail = ({ movie }) => {
+const MovieItem = ({ movie }) => {
     const { container, titleStyle, subTitleStyle } = styles;
     const { title, year, director } = movie;
     return (
@@ -28,4 +28,4 @@ const styles = {
     }
 };
 
-export default MovieDetail;
+export default MovieItem;

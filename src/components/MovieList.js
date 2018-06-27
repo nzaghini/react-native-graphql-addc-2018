@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { ScrollView, Text, ActivityIndicator } from 'react-native';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import { MovieDetail } from './';
+import { MovieItem } from './';
 
 class MovieList extends Component {
 
     renderMovies({ allMovies }) {
         // Bad performance for large list. Example only.
         return allMovies.map(movie => {
-            return <MovieDetail key={movie.id} movie={movie} />;
+            return <MovieItem key={movie.id} movie={movie} />;
         });
     }
 
