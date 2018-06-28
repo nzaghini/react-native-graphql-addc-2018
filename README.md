@@ -56,7 +56,15 @@ This repository builds up several stages of the Workshop, including:
 - 🤟 GraphQL querying via Apollo Client
 - 👍 and more ...
 
-You can check out the different commits to see the different stages of the project. This is a valid approach also during the Workshop in case you fall behind and want to quickly catch up. 
+You can check out the different commits to see the different stages of the project. This is a valid approach also during the Workshop in case you fall behind and want to quickly catch up.
+
+Tags you may want to look at:
+
+- 0.1.0: Scaffolding project setup
+- 0.2.0: Static Movie List on the screen
+- 0.3.0: Added support for Directors of Movies
+- 0.4.0: Apollo integration for GraphQL network query
+- 0.5.0: Added Jest tests 
 
 ## Repository Evolution 🤤
 This repository won't stale at the Workshop date. It will continue growing with extra features over time as a best practice example project of React Native with GraphQL. Future development will include:
