@@ -30,7 +30,7 @@ For a smoother and faster start of the workshop, please make sure you have your 
 
 ### Environment Setup 💻
 Setup your machine by following the instructions available at official React Native getting started [link](https://facebook.github.io/react-native/docs/getting-started.html).
-Select your Operating System and desired target platform(s), then follow the setup instructions.
+Click on `Building Projects with Native Code` tab, select your Operating System and desired target platform(s), then follow the setup instructions.
 
 VSCode is the IDE that will be used during the course. Unless you have strong preferences on other IDEs it is suggested to have it installed before the start of the Workshop. You can download and install VSCode from [here](https://code.visualstudio.com/).
 
