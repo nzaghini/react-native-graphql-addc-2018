@@ -22,7 +22,7 @@ By the end of the workshop you will be capable of understanding the technologies
 
 There are 2 repositories for this workshop.  
 - 👉 This repository contains all the React Native codebase.
-- 👉 The [other](https://github.com/nzaghini/react-native-graphql-addc-2018) contains the GraphQL server codebase.
+- 👉 The [other](https://github.com/nzaghini/graphql-server-addc-2018) contains the GraphQL server codebase.
 
 ## Prepare for the Workshop 🤓
 
