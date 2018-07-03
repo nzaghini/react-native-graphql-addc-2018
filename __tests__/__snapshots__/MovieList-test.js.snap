@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly the list of movies 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#ddd",
+          "height": 60,
+          "justifyContent": "center",
+          "paddingLeft": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 18,
+          }
+        }
+      >
+        Interstellar
+         - 
+        2014
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 12,
+          }
+        }
+      >
+        test
+         
+        another
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders correctly the loading state 1`] = `
+<ActivityIndicator
+  animating={true}
+  color="#999999"
+  hidesWhenStopped={true}
+  size="small"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+/>
+`;

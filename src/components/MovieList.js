@@ -15,25 +15,23 @@ class MovieList extends Component {
 
     render() {
         return (
-            <Query query={query}>
+            <Query query={ALL_MOVIES_QUERY}>
                 {({ loading, error, data }) => {
                     if (loading) return <ActivityIndicator style={styles.loadingIndicator} />;
                     if (error) return <Text>{`Error: ${error}`}</Text>;
-                    console.log(data);
                     return (
                         <ScrollView>
                             {this.renderMovies(data)}
                         </ScrollView>
                     );
-            }}
-        </Query>
+                }}
+            </Query>
         );
     }
-
 }
 
 // es6 template string to crete the query
-const query = gql` 
+const ALL_MOVIES_QUERY = gql` 
     {
         allMovies{
             id
