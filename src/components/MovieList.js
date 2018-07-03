@@ -31,7 +31,7 @@ class MovieList extends Component {
 }
 
 // es6 template string to crete the query
-const ALL_MOVIES_QUERY = gql` 
+export const ALL_MOVIES_QUERY = gql` 
     {
         allMovies{
             id

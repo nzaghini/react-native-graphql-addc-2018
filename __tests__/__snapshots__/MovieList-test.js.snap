@@ -38,9 +38,9 @@ exports[`renders correctly the list of movies 1`] = `
           }
         }
       >
-        test
+        Christopher
          
-        another
+        Nolan
       </Text>
     </View>
   </View>
@@ -59,4 +59,20 @@ exports[`renders correctly the loading state 1`] = `
     }
   }
 />
+`;
+
+exports[`renders correctly when there are errors 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+>
+  Error: Error: Network error: ouch, something went wrong!
+</Text>
+`;
+
+exports[`renders correctly when there are no movies 1`] = `
+<RCTScrollView>
+  <View />
+</RCTScrollView>
 `;

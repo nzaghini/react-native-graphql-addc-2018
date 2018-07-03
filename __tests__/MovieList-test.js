@@ -1,25 +1,10 @@
 import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import renderer from 'react-test-renderer';
-import gql from 'graphql-tag';
 import wait from 'waait';
-import MovieList from '../src/components/MovieList';
+import MovieList, { ALL_MOVIES_QUERY } from '../src/components/MovieList';
 
-const ALL_MOVIES_QUERY = gql` 
-    {
-        allMovies{
-            id
-            title
-            year
-            director{
-                firstName
-                lastName
-            }
-        }
-    }
-`;
-
-const mocks = [
+const allMoviesMock = [
     {
         request: {
             query: ALL_MOVIES_QUERY,
@@ -32,8 +17,8 @@ const mocks = [
                         title: 'Interstellar',
                         year: '2014',
                         director: {
-                            firstName: 'test',
-                            lastName: 'another'
+                            firstName: 'Christopher',
+                            lastName: 'Nolan'
                         }
                     }
                 ],
@@ -42,10 +27,31 @@ const mocks = [
     },
 ];
 
+const noMoviesMock = [
+    {
+        request: {
+            query: ALL_MOVIES_QUERY,
+        },
+        result: {
+            data: {
+                allMovies: [],
+            },
+        },
+    },
+];
+
+const errorResponseMock = [
+    {
+        request: {
+            query: ALL_MOVIES_QUERY,
+        },
+        error: new Error('ouch, something went wrong!'),
+    },
+];
+
 test('renders correctly the loading state', () => {
-    console.log(mocks);
     const tree = renderer.create(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider mocks={allMoviesMock} addTypename={false}>
         <MovieList />
       </MockedProvider>
     );
@@ -56,16 +62,38 @@ test('renders correctly the loading state', () => {
 
 //** Learned the from https://dev-blog.apollodata.com/testing-apollos-query-component-d575dc642e04 */
 test('renders correctly the list of movies', async () => {
-    console.log(mocks);
     const tree = renderer.create(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider mocks={allMoviesMock} addTypename={false}>
         <MovieList />
       </MockedProvider>
     );
     
     await wait(0); // wait for response
 
-    const firstMovieTitle = mocks[0].result.data.allMovies[0].title;
+    const firstMovieTitle = allMoviesMock[0].result.data.allMovies[0].title;
     expect(JSON.stringify(tree)).toContain(firstMovieTitle);
     expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('renders correctly when there are no movies', async () => {
+    const tree = renderer.create(
+      <MockedProvider mocks={noMoviesMock} addTypename={false}>
+        <MovieList />
+      </MockedProvider>
+    );
+    
+    await wait(0); // wait for response
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('renders correctly when there are errors', async () => {
+    const tree = renderer.create(
+        <MockedProvider mocks={errorResponseMock} addTypename={false}>
+          <MovieList />
+        </MockedProvider>
+    );
+      
+    await wait(0); // wait for response
+    expect(JSON.stringify(tree)).toContain('ouch, something went wrong!');
+    expect(tree.toJSON()).toMatchSnapshot();  
 });
