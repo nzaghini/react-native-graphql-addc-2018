@@ -65,6 +65,8 @@ Tags you may want to look at:
 - 0.3.0: Added support for Directors of Movies
 - 0.4.0: Apollo integration for GraphQL network query
 - 0.5.0: Added Jest tests 
+- 0.6.0: Improved tests with Apollo MockProvider
+- 0.7.0: Covered extra test cases 
 
 ## Repository Evolution 🤤
 This repository won't stale at the Workshop date. It will continue growing with extra features over time as a best practice example project of React Native with GraphQL. Future development will include:
