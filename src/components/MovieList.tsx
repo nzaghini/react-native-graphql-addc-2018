@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { ScrollView, Text, ActivityIndicator } from 'react-native';
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
-import { MovieItem } from './';
+import React from "react";
+import { ScrollView, Text, ActivityIndicator, StyleSheet } from "react-native";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
+import { MovieItem } from ".";
 
-class MovieList extends Component {
+class MovieList extends React.Component {
 
-    renderMovies({ allMovies }) {
+    private renderMovies({ allMovies }) {
         // Bad performance for large list. Example only.
         return allMovies.map(movie => {
             return <MovieItem key={movie.id} movie={movie} />;
@@ -45,10 +45,11 @@ export const ALL_MOVIES_QUERY = gql`
     }
 `;
 
-const styles = {
+
+const styles = StyleSheet.create({
     loadingIndicator: {
         flex: 1,
     },
-};
+});
 
 export default MovieList;

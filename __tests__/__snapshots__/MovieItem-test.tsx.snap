@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly first movie 1`] = `
+exports[`<MovieItem /> renders correctly first movie 1`] = `
 <View
   style={
     Object {
@@ -13,9 +13,6 @@ exports[`renders correctly first movie 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "fontSize": 18,
@@ -27,9 +24,6 @@ exports[`renders correctly first movie 1`] = `
     2014
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "fontSize": 12,
@@ -43,7 +37,7 @@ exports[`renders correctly first movie 1`] = `
 </View>
 `;
 
-exports[`renders correctly second movie 1`] = `
+exports[`<MovieItem /> renders correctly second movie 1`] = `
 <View
   style={
     Object {
@@ -56,9 +50,6 @@ exports[`renders correctly second movie 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "fontSize": 18,
@@ -70,9 +61,6 @@ exports[`renders correctly second movie 1`] = `
     2015
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "fontSize": 12,

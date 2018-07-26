@@ -1,0 +1,28 @@
+{
+    "extends": [
+      "tslint:latest",
+      "tslint-react"
+    ],
+    "linterOptions": {
+      "exclude": [
+        "node_modules"
+      ]
+    },
+    "rules": {
+      "indent": [true, "spaces", 2],
+      "no-trailing-whitespace": false,
+      "jsx-alignment": false,
+      "object-literal-sort-keys": false,
+      "interface-name": false,
+      "object-literal-shorthand": false,
+      "interface-over-type-literal": false,
+      "no-console": false,
+      "ordered-imports": false,
+      "no-implicit-dependencies": false,
+      "no-submodule-imports": false,
+      "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"],
+      "member-access": [true, "no-public"]
+    },
+    "tslint.enable": true
+  }
+  

@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const MovieItem = ({ movie }) => {
     const { container, titleStyle, subTitleStyle } = styles;
@@ -12,12 +12,12 @@ const MovieItem = ({ movie }) => {
     );
 };
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         height: 60,
-        justifyContent: 'center',
+        justifyContent: "center",
         paddingLeft: 10,
-        borderColor: '#ddd',
+        borderColor: "#ddd",
         borderBottomWidth: 1,
     },
     titleStyle: {
@@ -25,7 +25,7 @@ const styles = {
     },
     subTitleStyle: {
         fontSize: 12,
-    }
-};
+    },
+});
 
 export default MovieItem;
