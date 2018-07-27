@@ -1,9 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { ALL_MOVIES_QUERY_movies as Movie } from "../queries/models/ALL_MOVIES_QUERY";
 
-const MovieItem = ({ movie }) => {
+interface MovieProp {
+    movie: Movie;
+    key: string;
+}
+
+const MovieItem = (props: MovieProp) => {
     const { container, titleStyle, subTitleStyle } = styles;
-    const { title, year, director } = movie;
+    const { title, year, director } = props.movie;
     return (
         <View style={container}>
             <Text style={titleStyle}>{title} - {year}</Text>

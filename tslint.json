@@ -21,7 +21,8 @@
       "no-implicit-dependencies": false,
       "no-submodule-imports": false,
       "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"],
-      "member-access": [true, "no-public"]
+      "member-access": [true, "no-public"],
+      "jsx-no-multiline-js": false
     },
     "tslint.enable": true
   }

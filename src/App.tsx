@@ -5,7 +5,7 @@ import { ApolloProvider } from "react-apollo";
 import { Header, MovieList } from "./components";
 
 const client = new ApolloClient({
-    uri: "https://kit-haqozhrwga.now.sh/graphql",
+    uri: "https://kit-awbadxsigm.now.sh/graphql",
 });
 
 const App = () => (

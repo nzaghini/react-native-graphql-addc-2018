@@ -78,3 +78,10 @@ This repository won't stale at the Workshop date. It will continue growing with 
 - StyledComponent styles
 - CI/CD 
 - ... 
+
+## After workshop released features 🤤
+- ✅ TypeScript support
+- ✅ GraphQL types automatic generation automation
+    - Make sure apollo is installed with `npm install -g apollo`
+    - Run `yarn generate:graphql` to generate types into src/queries/models from src/queries/queries.graphql.js
+    - Check out the relative package.json script for more details

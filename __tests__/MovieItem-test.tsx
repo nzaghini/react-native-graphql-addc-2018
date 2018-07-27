@@ -1,19 +1,20 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import MovieItem from '../src/components/MovieItem';
+import React from "react";
+import renderer from "react-test-renderer";
+import MovieItem from "../src/components/MovieItem";
+import { ALL_MOVIES_QUERY_movies as Movie} from "../src/queries/models/ALL_MOVIES_QUERY";
 
 const mockListOfMovies = [ 
-    { id: 1, title: 'Interstellar', year: 2014, director: { firstName: 'Christopher', lastName: 'Nolan' } },
-    { id: 2, title: 'Mad Max: Fury Road', year: 2015, director: { firstName: 'George', lastName: 'Miller' } }
+    { id: "1", title: "Interstellar", year: "2014", director: { firstName: "Christopher", lastName: "Nolan" } },
+    { id: "2", title: "Mad Max: Fury Road", year: "2015", director: { firstName: "George", lastName: "Miller" } },
 ];
 
-describe('<MovieItem />', () => {
-    it('renders correctly first movie', () => {
+describe("<MovieItem />", () => {
+    it("renders correctly first movie", () => {
         const tree = renderer.create(<MovieItem key="1" movie={mockListOfMovies[0]} />).toJSON();
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders correctly second movie', () => {
+    it("renders correctly second movie", () => {
         const tree = renderer.create(<MovieItem key="1" movie={mockListOfMovies[1]} />).toJSON();
         expect(tree).toMatchSnapshot();
     });
