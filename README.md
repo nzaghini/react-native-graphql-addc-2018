@@ -72,8 +72,8 @@ Tags you may want to look at:
 This repository won't stale at the Workshop date. It will continue growing with extra features over time as a best practice example project of React Native with GraphQL. Future development will include:
 - Improved testing 
 - GraphQL mutations
-- Navigation to Movie details page
-    - Navigation and user interaction
+- ✅ Navigation to Movie details page
+    - ✅ Navigation and user interaction
 - Performance improvements with RN FlatList component
 - StyledComponent styles
 - CI/CD 
@@ -85,3 +85,5 @@ This repository won't stale at the Workshop date. It will continue growing with 
     - Make sure apollo is installed with `npm install -g apollo`
     - Run `yarn generate:graphql` to generate types into src/queries/models from src/queries/queries.graphql.js
     - Check out the relative package.json script for more details
+- ✅ Navigation to Movie details page with react-navigation
+- ✅ Navigation and user interaction with TouchableHighlight

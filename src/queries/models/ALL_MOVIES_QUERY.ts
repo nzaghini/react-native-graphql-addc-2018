@@ -20,7 +20,7 @@ export interface ALL_MOVIES_QUERY_movies {
 }
 
 export interface ALL_MOVIES_QUERY {
-  movies: (ALL_MOVIES_QUERY_movies | null)[] | null;
+  movies: ALL_MOVIES_QUERY_movies[] | null;
 }
 
 /* tslint:disable */

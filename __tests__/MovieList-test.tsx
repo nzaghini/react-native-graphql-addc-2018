@@ -2,7 +2,7 @@ import React from "react";
 import { MockedProvider } from "react-apollo/test-utils";
 import renderer from "react-test-renderer";
 import wait from "waait";
-import MovieList from "../src/components/MovieList";
+import MovieList from "../src/screens/MovieList";
 import { ALL_MOVIES_QUERY } from "../src/queries/queries.graphql";
 
 const allMoviesMock = [
@@ -19,9 +19,9 @@ const allMoviesMock = [
                         year: "2014",
                         director: {
                             firstName: "Christopher",
-                            lastName: "Nolan"
-                        }
-                    }
+                            lastName: "Nolan",
+                        },
+                    },
                 ],
             },
         },
@@ -55,7 +55,7 @@ describe("<MockedProvider />", () => {
         const tree = renderer.create(
         <MockedProvider mocks={allMoviesMock} addTypename={false}>
             <MovieList />
-        </MockedProvider>
+        </MockedProvider>,
         );
         
         // Not waiting for the provider to return, so loading is true
@@ -67,7 +67,7 @@ describe("<MockedProvider />", () => {
         const tree = renderer.create(
             <MockedProvider mocks={allMoviesMock} addTypename={false}>
                 <MovieList />
-            </MockedProvider>
+            </MockedProvider>,
         );
         
         await wait(0); // wait for response
@@ -81,7 +81,7 @@ describe("<MockedProvider />", () => {
         const tree = renderer.create(
         <MockedProvider mocks={noMoviesMock} addTypename={false}>
             <MovieList />
-        </MockedProvider>
+        </MockedProvider>,
         );
         
         await wait(0); // wait for response
@@ -91,8 +91,8 @@ describe("<MockedProvider />", () => {
     it("renders correctly when there are errors", async () => {
         const tree = renderer.create(
             <MockedProvider mocks={errorResponseMock} addTypename={false}>
-            <MovieList />
-            </MockedProvider>
+                <MovieList />
+            </MockedProvider>,
         );
         
         await wait(0); // wait for response

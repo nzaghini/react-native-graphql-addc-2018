@@ -4,38 +4,50 @@ exports[`<MockedProvider /> renders correctly the list of movies 1`] = `
 <RCTScrollView>
   <View>
     <View
-      style={
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#ddd",
-          "height": 60,
-          "justifyContent": "center",
-          "paddingLeft": 10,
-        }
-      }
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
     >
-      <Text
+      <View
         style={
           Object {
-            "fontSize": 18,
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "height": 60,
+            "justifyContent": "center",
+            "paddingLeft": 10,
           }
         }
       >
-        Interstellar
-         - 
-        2014
-      </Text>
-      <Text
-        style={
-          Object {
-            "fontSize": 12,
+        <Text
+          style={
+            Object {
+              "fontSize": 18,
+            }
           }
-        }
-      >
-        Christopher
-         
-        Nolan
-      </Text>
+        >
+          Interstellar
+           - 
+          2014
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 12,
+            }
+          }
+        >
+          Christopher
+           
+          Nolan
+        </Text>
+      </View>
     </View>
   </View>
 </RCTScrollView>

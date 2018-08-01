@@ -1,17 +1,27 @@
 import React from "react";
 import { ScrollView, Text, ActivityIndicator, StyleSheet } from "react-native";
 import { Query } from "react-apollo";
-import { MovieItem } from ".";
+import { MovieItem } from "../components";
 import { ALL_MOVIES_QUERY } from "../queries/queries.graphql";
-import { ALL_MOVIES_QUERY as AllMovies } from "../queries/models/ALL_MOVIES_QUERY";
+import { ALL_MOVIES_QUERY as AllMovies, 
+         ALL_MOVIES_QUERY_movies as Movie } from "../queries/models/ALL_MOVIES_QUERY";
+import { ScreenProps } from "../common/ScreenProps";
+import { Screens } from "../common/AppNavigator";
 
-class MovieList extends React.Component {
+class MovieList extends React.Component<ScreenProps> {
+
+    static navigationOptions = {
+        title: "Movie List",
+    };
+
+    constructor(props: ScreenProps) {
+        super(props);
+    }
 
     render() {
         return (
             <Query query={ALL_MOVIES_QUERY}>
                 {({ loading, error, data }) => {
-                    
                     if (loading) {
                         return <ActivityIndicator style={styles.loadingIndicator} />;
                     }
@@ -28,13 +38,16 @@ class MovieList extends React.Component {
         );
     }
 
+    private navigateTo = (movie: Movie) => {
+        this.props.navigation.navigate(Screens.MovieDetails, { movie });
+    }
+
     private renderMovies(allMovies: AllMovies) {
         if (!allMovies || !allMovies.movies) {
             return null;
         }
         return allMovies.movies.map((movie) => {
-            if (!movie) { return; }
-            return <MovieItem key={movie.id} movie={movie} />;
+            return <MovieItem key={movie.id} movie={movie} action={this.navigateTo}/>;
         });
     }
 }

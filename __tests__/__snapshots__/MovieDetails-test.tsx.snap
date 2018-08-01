@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieDetails /> with Movie provided via navigation Renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 60,
+        "padding": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Interstellar
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#a9a9a9",
+        "fontSize": 20,
+        "padding": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Christopher
+     
+    Nolan
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#a9a9a9",
+        "fontSize": 10,
+        "padding": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    2014
+  </Text>
+</View>
+`;
+
+exports[`<MovieDetails /> without Movie provided Something wrong here 1`] = `
+<Text>
+  Something wrong here!
+</Text>
+`;
+
+exports[`<MovieDetails /> without Movie provided via props directly Something wrong here 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 60,
+        "padding": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Mad Max: Fury Road
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#a9a9a9",
+        "fontSize": 20,
+        "padding": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    George
+     
+    Miller
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#a9a9a9",
+        "fontSize": 10,
+        "padding": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    2015
+  </Text>
+</View>
+`;
