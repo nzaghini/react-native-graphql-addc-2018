@@ -6,7 +6,7 @@ exports[`<MovieDetails /> with Movie provided via navigation Renders correctly 1
     Object {
       "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
+      "justifyContent": "flex-start",
     }
   }
 >
@@ -31,9 +31,7 @@ exports[`<MovieDetails /> with Movie provided via navigation Renders correctly 1
       }
     }
   >
-    Christopher
-     
-    Nolan
+    Director: Christopher Nolan
   </Text>
   <Text
     style={
@@ -45,7 +43,7 @@ exports[`<MovieDetails /> with Movie provided via navigation Renders correctly 1
       }
     }
   >
-    2014
+    Year: 2014
   </Text>
 </View>
 `;
@@ -62,7 +60,7 @@ exports[`<MovieDetails /> without Movie provided via props directly Something wr
     Object {
       "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
+      "justifyContent": "flex-start",
     }
   }
 >
@@ -87,9 +85,7 @@ exports[`<MovieDetails /> without Movie provided via props directly Something wr
       }
     }
   >
-    George
-     
-    Miller
+    Director: George Miller
   </Text>
   <Text
     style={
@@ -101,7 +97,7 @@ exports[`<MovieDetails /> without Movie provided via props directly Something wr
       }
     }
   >
-    2015
+    Year: 2015
   </Text>
 </View>
 `;

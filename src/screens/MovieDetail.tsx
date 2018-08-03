@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { ScreenProps } from "../common/ScreenProps";
 import { ALL_MOVIES_QUERY_movies as Movie } from "../queries/models/ALL_MOVIES_QUERY";
+import { i18n } from "../../i18n/I18n";
 
 interface MovieDetailsProps extends ScreenProps {
     movie?: Movie;
@@ -10,7 +11,7 @@ interface MovieDetailsProps extends ScreenProps {
 class MovieDetails extends React.Component<MovieDetailsProps> {
     
     static navigationOptions = {
-        title: "Movie Detail",
+        title: i18n("movieDetails.title"),
     };
 
     render() {
@@ -18,11 +19,12 @@ class MovieDetails extends React.Component<MovieDetailsProps> {
         console.log(movie);
         if (!movie) { return <Text>Something wrong here!</Text>; }
         const { title, container, director, year } = styles;
+        const directorName = `${movie.director.firstName} ${movie.director.lastName}`;
         return (
             <View style={container}>
                 <Text style={title}>{movie.title}</Text>
-                <Text style={director}>{movie.director.firstName} {movie.director.lastName}</Text>
-                <Text style={year}>{movie.year}</Text>
+                <Text style={director}>{i18n("movieDetails.director", {directorName})}</Text>
+                <Text style={year}>{i18n("movieDetails.year", {year: movie.year})}</Text>
             </View>
         );
     }
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
     },
     title: {
         fontSize: 60,

@@ -7,11 +7,12 @@ import { ALL_MOVIES_QUERY as AllMovies,
          ALL_MOVIES_QUERY_movies as Movie } from "../queries/models/ALL_MOVIES_QUERY";
 import { ScreenProps } from "../common/ScreenProps";
 import { Screens } from "../common/AppNavigator";
+import { i18n } from "../../i18n/I18n";
 
 class MovieList extends React.Component<ScreenProps> {
 
     static navigationOptions = {
-        title: "Movie List",
+        title: i18n("movieList.title"),
     };
 
     constructor(props: ScreenProps) {

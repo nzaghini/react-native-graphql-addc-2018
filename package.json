@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean-cache": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache verify && npm install && npm start -- --reset-cache",
+    "start-clean": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && yarn start --reset-cache",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone X\"",
-    "build:ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
-    "generate:graphql": "apollo codegen:generate --schema=https://kit-omgqlyfdcg.now.sh/graphql --target=typescript --outputFlat --queries=src/queries/queries.graphql.ts  ./src/queries/models/"
+    "generate:graphql": "apollo codegen:generate --schema=https://kit-omgqlyfdcg.now.sh/graphql --target=typescript --outputFlat --queries=src/queries/queries.graphql.ts  ./src/queries/models/",
+    "bundle-android": "cd android; ./gradlew assembleRelease; cd ..",
+    "bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'"
   },
   "dependencies": {
     "apollo-boost": "^0.1.12",
@@ -17,13 +18,15 @@
     "react": "16.4.1",
     "react-apollo": "^2.1.9",
     "react-native": "0.56.0",
+    "react-native-i18n": "^2.0.15",
     "react-navigation": "^2.9.3"
   },
   "devDependencies": {
-    "@types/react-navigation": "^2.0.12",
+    "@types/react-native-i18n": "^2.0.0",
     "@types/jest": "^23.3.0",
     "@types/react": "^16.4.7",
     "@types/react-native": "^0.56.4",
+    "@types/react-navigation": "^2.0.12",
     "@types/react-test-renderer": "^16.0.1",
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
@@ -60,6 +63,8 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-navigation)"
     ],
-    "setupFiles": ["./jest/setup.js"]
+    "setupFiles": [
+      "./jest/setup.js"
+    ]
   }
 }
