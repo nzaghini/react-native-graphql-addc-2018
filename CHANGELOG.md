@@ -1,3 +1,7 @@
+## i18n support
+- Support for internationalisation 
+- Added Podfile for iOS project
+
 ## Add react-navigation and movie details screen
 - Added tests and tweaked Jest to play nicely with react-navigation
 - Allowed movie on MovieDetails via both props and navigation 

@@ -87,3 +87,5 @@ This repository won't stale at the Workshop date. It will continue growing with 
     - Check out the relative package.json script for more details
 - ✅ Navigation to Movie details page with react-navigation
 - ✅ Navigation and user interaction with TouchableHighlight
+- ✅ i18n support 
+- ✅ Podfile for iOS
