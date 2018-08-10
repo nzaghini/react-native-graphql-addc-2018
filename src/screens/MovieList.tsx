@@ -30,7 +30,7 @@ class MovieList extends React.Component<ScreenProps> {
                         return <Text>{`Error: ${error}`}</Text>;
                     }
                     return (
-                        <ScrollView>
+                        <ScrollView testID="movieList">
                             {this.renderMovies(data)}
                         </ScrollView>
                     );

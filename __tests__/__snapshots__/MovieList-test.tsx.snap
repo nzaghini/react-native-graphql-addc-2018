@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MockedProvider /> renders correctly the list of movies 1`] = `
-<RCTScrollView>
+<RCTScrollView
+  testID="movieList"
+>
   <View>
     <View
       accessible={true}
@@ -13,6 +15,7 @@ exports[`<MockedProvider /> renders correctly the list of movies 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={null}
+      testID="movieId_1"
     >
       <View
         style={
@@ -74,7 +77,9 @@ exports[`<MockedProvider /> renders correctly when there are errors 1`] = `
 `;
 
 exports[`<MockedProvider /> renders correctly when there are no movies 1`] = `
-<RCTScrollView>
+<RCTScrollView
+  testID="movieList"
+>
   <View />
 </RCTScrollView>
 `;

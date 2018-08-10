@@ -11,6 +11,7 @@ exports[`<MovieItem /> renders correctly first movie 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={null}
+  testID="movieId_1"
 >
   <View
     style={
@@ -60,6 +61,7 @@ exports[`<MovieItem /> renders correctly second movie 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={null}
+  testID="movieId_2"
 >
   <View
     style={

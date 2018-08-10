@@ -20,8 +20,8 @@ class MovieDetails extends React.Component<MovieDetailsProps> {
         if (!movie) { return <Text>Something wrong here!</Text>; }
         const { title, container, director, year } = styles;
         const directorName = `${movie.director.firstName} ${movie.director.lastName}`;
-        return (
-            <View style={container}>
+        return ( 
+            <View style={container} testID={`movieDetailsId_${movie.id}`}>
                 <Text style={title}>{movie.title}</Text>
                 <Text style={director}>{i18n("movieDetails.director", {directorName})}</Text>
                 <Text style={year}>{i18n("movieDetails.year", {year: movie.year})}</Text>

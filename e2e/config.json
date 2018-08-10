@@ -1,0 +1,5 @@
+
+{
+    "setupTestFrameworkScriptFile" : "./init.js",
+    "testEnvironment": "node"
+}  

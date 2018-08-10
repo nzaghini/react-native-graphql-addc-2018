@@ -9,6 +9,7 @@ exports[`<MovieDetails /> with Movie provided via navigation Renders correctly 1
       "justifyContent": "flex-start",
     }
   }
+  testID="movieDetailsId_1"
 >
   <Text
     style={
@@ -63,6 +64,7 @@ exports[`<MovieDetails /> without Movie provided via props directly Something wr
       "justifyContent": "flex-start",
     }
   }
+  testID="movieDetailsId_2"
 >
   <Text
     style={

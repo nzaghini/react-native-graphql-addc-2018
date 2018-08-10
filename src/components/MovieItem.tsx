@@ -16,10 +16,13 @@ class MovieItem extends React.Component<MovieProp> {
 
     render() {
         const { container, titleStyle, subTitleStyle } = styles;
-        const { title, year, director } = this.props.movie;
+        const { id, title, year, director } = this.props.movie;
 
         return (
-            <TouchableHighlight onPress={this.onPress} activeOpacity={0.4} underlayColor={"white"}>
+            <TouchableHighlight onPress={this.onPress} 
+                                activeOpacity={0.4} 
+                                underlayColor={"white"} 
+                                testID={`movieId_${id}`}>
                 <View style={container}>
                     <Text style={titleStyle}>{title} - {year}</Text>
                     <Text style={subTitleStyle}>{director.firstName} {director.lastName}</Text>

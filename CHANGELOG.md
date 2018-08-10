@@ -1,3 +1,7 @@
+## Detox Testing
+- Added support for Detox end to end testing 
+- Improved Jest test reliability
+
 ## i18n support
 - Support for internationalisation 
 - Added Podfile for iOS project
