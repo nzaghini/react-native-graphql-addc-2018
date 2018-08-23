@@ -80,6 +80,7 @@ This repository won't stale at the Workshop date. It will continue growing with 
 - ... 
 
 ## After workshop released features 🤤
+- ✅ Upgrade to 0.56.0 react native (working Jest with Babel 7 🤯)
 - ✅ TypeScript support
 - ✅ GraphQL types automatic generation automation
     - Make sure apollo is installed with `npm install -g apollo`
