@@ -30,4 +30,6 @@ target 'ADDCWorkshop2018' do
   # Manually added
   pod 'RNI18n', :path => '../node_modules/react-native-i18n'
 
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
 end

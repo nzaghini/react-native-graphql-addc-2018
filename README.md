@@ -93,3 +93,5 @@ This repository won't stale at the Workshop date. It will continue growing with 
 - ✅ Added Detox for end to end testing! 
     - Make sure Detox is installed https://github.com/wix/detox
     - Run `yarn detox` once detox is installed in your system 
+- ✅ Added support for Code Push 🤩
+

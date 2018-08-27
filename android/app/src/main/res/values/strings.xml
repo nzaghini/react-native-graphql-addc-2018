@@ -1,3 +1,4 @@
 <resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">EFI0GBjTizkud-4NoU2kpaYaVj-5HJB0Dx2L7</string>
     <string name="app_name">ADDCWorkshop2018</string>
 </resources>
